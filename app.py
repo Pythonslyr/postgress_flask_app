@@ -22,7 +22,7 @@ def get_students():
     try:
         conn = psycopg2.connect(host=ENDPOINT, port=PORT, database=DBNAME, user=USER, password=PASSWORD)
         cur = conn.cursor()
-        cur.execute("""SELECT * from test""")
+        cur.execute("""SELECT * from students""")
         query_results = cur.fetchall()
         print(query_results)
         return(query_results)
