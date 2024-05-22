@@ -1,5 +1,6 @@
 from flask import Flask
 import psycopg2
+import os
 
 #RDS connection parameters!!
 ENDPOINT= "studentdb.cnuoyci62mqc.us-east-2.rds.amazonaws.com"
@@ -31,4 +32,4 @@ def get_students():
         return("Database connection failed due to {}".format(e))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT",5000)))
