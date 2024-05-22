@@ -1,7 +1,7 @@
 from flask import Flask
 import psycopg2
 
-#RDS connection parameters
+#RDS connection parameters!
 ENDPOINT= "studentdb.cnuoyci62mqc.us-east-2.rds.amazonaws.com"
 PORT= "5432"
 USER= "postgres"
